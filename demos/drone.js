@@ -6,6 +6,15 @@ var tmpMatrix, tmpPos;
 
 function demo() {
 
+//view.moveCam({ theta:-90, phi:0, distance:5, target:[0,1,0] });
+    view.moveCam({ theta:135, phi:20, distance:5, target:[0,1,0] });
+
+   // view.addSky({  hour:hour });
+
+    //view.addSky({  url:'parking.hdr', visible:true });
+    view.addSky({  url:'parking.jpg', visible:true });
+
+    view.setShadow( { size:30, near:150, far:250 } );
     view.moveCam({ theta:0, phi:20, distance:30, target:[0,1,0] });
     
     physic.set();

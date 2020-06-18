@@ -4,7 +4,7 @@
 var option = {
 
     restart:false,
-    follow:false,
+    follow:true,
 
     name:'buggy',
 
@@ -282,6 +282,9 @@ function makeBuggy () {
         w_roll: { min:0, max:1, precision:2, color:0xCCCC44 },
 
     });
+//follow camera
+    if( option.follow ) view.getControls().initFollow( physic.byName( option.name ), {distance:5} );
+    else view.getControls().resetFollow();
 
     buggyCar = physic.byName( option.name );
 
@@ -310,7 +313,7 @@ function applyOption () {
     //physic.post( 'setVehicle', option );
     physic.setVehicle( option );
 
-    follow( option.follow ? 'buggy' : 'none' );
+    follow( option.follow ? 'buggy' : 'none',{distance:5} );
 
 }
 

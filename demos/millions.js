@@ -23,7 +23,7 @@ function demo() {
     view.hideGrid();
 
     view.addSky({url:'photo.jpg', hdr:true, visible:true });
-
+ 
     view.moveCam({ theta:-15, phi:0, distance:200, target:[34,-16,0] });
 
     physic.set({
@@ -40,7 +40,7 @@ function demo() {
 
     view.resetCallBack = extraReset;
 
-    glassMat = view.material({ name:'glassMat', color:0xCCCCCF, transparent:true, opacity:0.3, depthTest:true, depthWrite:false, metalness:0.8, roughness:0.2, premultipliedAlpha:true })
+    glassMat = view.material({ name:'glassMat', color:0x00CCF, transparent:true, opacity:0.3, depthTest:true, depthWrite:false, metalness:0.8, roughness:0.2, premultipliedAlpha:true })
 
     view.load ( ['million.sea'], afterLoadGeometry, true, true );
 

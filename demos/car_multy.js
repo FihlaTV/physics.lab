@@ -8,7 +8,7 @@ var option = {
 
 function demo () {
 
-    view.moveCam({ theta:0, phi:10, distance:30, target:[0,1,0] });
+   // view.moveCam({ theta:0, phi:10, distance:30, target:[0,1,0] });
     view.setSky({ url:'river.jpg' });
     view.load ( 'cars.sea', afterLoad, true );
     physic.set();
